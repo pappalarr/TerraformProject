@@ -10,8 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: terraform init
-  displayName: terraform init
-
-- script: terraform plan
-  displayName: plan
+- task: Terraform@2
+  inputs:
+    TemplatePath: './modules'
+    Arguments: 'init'
+    PlanPath: './modules'
+    InstallTerraform: true
+    UseAzureSub: false
