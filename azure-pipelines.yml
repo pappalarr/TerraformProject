@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: 'SELFH'
+  vmImage: ubuntu-latest'
 
 steps:
 - task: DownloadPipelineArtifact@1
