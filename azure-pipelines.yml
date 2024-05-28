@@ -10,6 +10,12 @@ pool:
   name: 'Default'
 
 steps:
+- task: DownloadPipelineArtifact@1
+  inputs:
+    buildType: 'current'
+    targetPath: '$(Pipeline.Workspace)'
+
+
 - task: Terraform@2
   inputs:
     TemplatePath: './modules'
