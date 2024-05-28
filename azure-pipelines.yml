@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: 'Default'
+  name: 'SELFH'
 
 steps:
 - task: DownloadPipelineArtifact@1
